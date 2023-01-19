@@ -1,0 +1,44 @@
+* {
+
+    box-sizing: border-box;
+}
+
+.container {
+
+    display: grid; /*generamos un grid a nivel de bloque*/
+    width: 80%; /*porcentaje de largo al que vamos a representar nuestro grid*/
+    grid-template-columns: repeat(5, 20%); /*creamos cinco columnas, todas a un 20%, usando repeat()*/
+    grid-template-rows: repeat(3, 100px); /**creamos tres filas, todas a 100px, usando de nuevo repeat()*/
+    grid-template-areas: 
+
+        "cab cab cab cab cab"
+        "menu . main main main"
+        "menu pie pie pie pie";
+
+    margin: 20px auto;
+}
+
+#cab {
+
+    background-color: rgb(135, 168, 240);
+    grid-area: cab;
+}
+
+#menu {
+
+    background-color:rgb(226, 67, 67);
+    grid-area: menu;
+}
+
+#main {
+
+    background-color: rgb(248, 248, 106);
+    grid-area: main;
+}
+
+#pie {
+
+    background-color: rgb(88, 165, 88);
+    grid-area: pie;
+}
+
